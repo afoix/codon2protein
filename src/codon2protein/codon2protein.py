@@ -30,11 +30,31 @@ else:
     print("The file does not exist.")
 
 # Find start codons in the sequence (Daniel)
-def find_codon_start(codon):
+
+def find_start_codon(fasta_string: str, first=False, oof=True) -> list:
+    """identify start codons in the provided fasta string
+
+    Args:
+        fasta_string (str): string of DNA nucleotides
+        first (bool, optional): If false, returns the position of all start codons in the string.
+        If true, returns only the first observation of the start codon. Defaults to False.
+        oof(bool, optional): If true, keeps all found start codons. If false, removes all codons that do not
+        align with the first starting base of the fasta string.
+    Returns:
+        list: List of startcodon positions. An entry in the list represents the position of  the first base of the start codon.
     """
-    
-    """
-    return('')
+    # apply regex search on string to find all start codons
+    scodons=[c.start() for c in re.finditer(pattern="ATG", string = fasta_string)]
+
+    # remove out of frames codons if wanted
+    if oof==False:
+        scodons = [s for s in scodons if s%3==0]
+
+    # remove all but the first start codon
+    if first == True:
+        return [scodons[0]]
+    else:
+        return scodons
 
 # Read codon_table.csv and create a dictionary (Anna)
 def read_codon_table(codon_table='codon_table.csv'):
