@@ -29,7 +29,7 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 
 ## License
 
-`codon2protein` was created by afoix. It is licensed under the terms of the MIT license.
+`codon2protein` was created by group 5. It is licensed under the terms of the MIT license.
 
 ## Credits
 
