@@ -9,7 +9,7 @@ EIPP project: A program to convert codons to proteins and create a Python packag
 - [ ] Create a testing framework for your package (pytest)
 - [ ] Create documentation and compile it as html (sphinx)
 - [ ] Publish the package to Test PiPy using poetry
-- [ ] (optional) Track your project (GitHub)
+- [X] (optional) Track your project (GitHub)
 - [ ] (optional) Publish your package to PiPy (poetry)
 
 
