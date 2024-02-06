@@ -30,8 +30,6 @@ else:
     print("The file does not exist.")
     
 # Find start codons in the sequence (Daniel)
-
-
 def find_start_codon(fasta_string: str, first=False, oof=True) -> list:
     """identify start codons in the provided fasta string
 
