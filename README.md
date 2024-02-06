@@ -1,6 +1,6 @@
-# Codon2Protein
+# codon2protein
 
-## Introduciton
+EIPP project: A program to convert codons to proteins and create a Python package
 
 
 ## Goals of the project
@@ -12,7 +12,25 @@
 - [ ] (optional) Track your project (GitHub)
 - [ ] (optional) Publish your package to PiPy (poetry)
 
-## Other things we want to add
 
+## Installation
 
-## Authors of the project
+```bash
+$ pip install codon2protein
+```
+
+## Usage
+
+- TODO
+
+## Contributing
+
+Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.
+
+## License
+
+`codon2protein` was created by afoix. It is licensed under the terms of the MIT license.
+
+## Credits
+
+`codon2protein` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
