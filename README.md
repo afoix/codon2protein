@@ -14,3 +14,5 @@
 
 ## Other things we want to add
 
+
+## Authors of the project
