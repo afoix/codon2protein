@@ -1,5 +1,5 @@
 import pytest
-from codon2protein import read_codon_table
+from codon2protein import read_codon_table, find_start_codon
 
 # Define test data
 TEST_CODON_TABLE = 'test_codon_table.csv'  # Assume this is your test CSV file
@@ -15,4 +15,11 @@ def test_create_codon_to_amino_acid_dict():
     result = read_codon_table(TEST_CODON_TABLE)
     assert result == expected_result
 
+from codon2protein import find_start_codon
 
+@pytest.mark.find_start_codon
+def test_find_start_codon():
+    """Test start codon finder function"""
+    assert find_start_codon(fasta_string="ATGCGGTAGTGAGATGGATAA") == [0, 13]
+    assert find_start_codon(fasta_string="ATGCGGTAGTGAGATGGATAA", first=True) == [0]
+    assert find_start_codon(fasta_string="ATGCGGTAGTGAGATGGATAA", oof=False) == [0]
