@@ -5,6 +5,9 @@ import re
 
 #  Read input file (FASTA) and remove the header (Nick)
 def read_fasta(fasta_file):
+    # I created a folder on my Desktop called 'codon2protein'
+    # This folder contains the 'human_notch.fasta' file
+    # Depending on the folders you have to change the path
 
     # Define the path to the FASTA file
     fasta_file_path = os.path.join(os.path.expanduser('~'), 'Desktop', 'codon2protein', 'human_notch.fasta')
