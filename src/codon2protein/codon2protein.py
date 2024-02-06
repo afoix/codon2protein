@@ -1,5 +1,4 @@
 import csv
-import pandas for use in creating dataframe
 import pandas as pd
 import os
 
