@@ -1,6 +1,7 @@
 import csv
 import pandas as pd
 import os
+import re
 
 #  Read input file (FASTA) and remove the header (Nick)
 def read_fasta(fasta_file):
