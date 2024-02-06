@@ -2,7 +2,7 @@
 name = "codon2protein"
 version = "0.1.0"
 description = "EIPP project: A program to convert codons to proteins and create a Python package"
-authors = ["afoix"]
+authors = ["group 5"]
 license = "MIT"
 readme = "README.md"
 
