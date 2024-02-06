@@ -1,5 +1,7 @@
+from __future__ import absolute_import
 import pytest
-from codon2protein import read_fasta, find_start_codon, read_codon_table, translate 
+from codon2protein.codon2protein import read_fasta, find_start_codon, read_codon_table, translate 
+#import src.codon2protein 
 
 # Define test data
 TEST_CODON_TABLE = 'test_codon_table.csv'  # Assume this is your test CSV file
@@ -23,7 +25,7 @@ def test_read_fasta():
 
 def test_translate():
     sequence="ATGTTTTTTTAATGTATGAGTAGGGGTTAG"    
-    codon_table = {"ATG" : "start",
+    codon_table = {"ATG" : "M",
                    "TTT" : "P"    ,
                    "TAA" : "stop" ,
                    "TGT" : "C"    ,
@@ -32,11 +34,11 @@ def test_translate():
                    "GGT" : "G"    ,
                    "TAG" : "stop" ,
                   } 
-    expected_result = [(0,"PP"), (6,"SAG")]
+    expected_result = [(0,"MPP"), (15,"MSAG")]
     result = translate(sequence, codon_table)
     assert result == expected_result
 
-@pytest.mark.find_start_codon
+#@pytest.mark.find_start_codon
 def test_find_start_codon():
     """Test start codon finder function"""
     assert find_start_codon(fasta_string="ATGCGGTAGTGAGATGGATAA") == [0, 13]

@@ -85,7 +85,7 @@ def translate(dna_sequence, codon_table):
     """
 
     proteins = []
-    codon_starts = find_start_codon(dna_sequence)
+    codon_starts = find_start_codon(dna_sequence, oof=False)
 
     for start_codon in codon_starts:
         protein = ''
