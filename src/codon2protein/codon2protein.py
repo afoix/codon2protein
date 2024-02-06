@@ -76,12 +76,12 @@ def find_start_codon(fasta_string: str, first=False, oof=True) -> list:
 def translate(dna_sequence, codon_table):
 
     """This function translates DNA sequences into all conceivable proteins.
-    #Parameters:
-    #    dna_sequence: DNA sequence
-    #    codon_table: DNA to codon table
+    Parameters:
+        dna_sequence: DNA sequence
+        codon_table: DNA to codon table
 
-    #Returns:
-    #    proteins: list of all conceivable proteins that could be translated from input DNA sequence together with their associated start index in the dna sequence
+    Returns:
+        proteins: list of all conceivable proteins that could be translated from input DNA sequence together with their associated start index in the dna sequence
     """
 
     proteins = []
