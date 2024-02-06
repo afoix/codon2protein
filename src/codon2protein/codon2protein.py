@@ -1,4 +1,5 @@
-#import pandas for use in creating dataframe
+import csv
+import pandas for use in creating dataframe
 import pandas as pd
 import os
 
@@ -28,8 +29,9 @@ def read_fasta(fasta_file):
 
 else:
     print("The file does not exist.")
-
+    
 # Find start codons in the sequence (Daniel)
+
 
 def find_start_codon(fasta_string: str, first=False, oof=True) -> list:
     """identify start codons in the provided fasta string
@@ -55,13 +57,34 @@ def find_start_codon(fasta_string: str, first=False, oof=True) -> list:
         return [scodons[0]]
     else:
         return scodons
+    
 
 # Read codon_table.csv and create a dictionary (Anna)
 def read_codon_table(codon_table='codon_table.csv'):
-    """    
-    
     """
-    return('')      
+    Create a dictionary that maps RNA codons to amino acids.
+
+    Constructs dictionary by reading a .csv file containing codon to amino
+    acid mappings.
+
+    Arguments:
+        codon_table (string, optional): path to the .csv file containing
+            codon to amino acid mappings. Assumed column structure is
+            'Codon', 'Amino Acid Abbreviation', 'Amino Acid Code', and
+            'Amino Acid Name'. Default is 'codon_table.csv'
+    Returns:
+        (dictionary, string:string): dictionary with codons as keys and
+            amino acid codes as values.
+    """
+    
+    codon_to_amino_acid = {}
+    
+    with open(codon_table, 'r') as file:
+        codon_reader = csv.DictReader(file)
+        codon_to_amino_acid = {row['Codon']:row['AA.Code'] for row in codon_reader}
+        
+    return codon_to_amino_acid
+      
 
 # Translate the codon to protein (Noah)
 def translate(fasta_file, codon_table):
