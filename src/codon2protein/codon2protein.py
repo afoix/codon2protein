@@ -93,8 +93,8 @@ def main(fasta_input, fasta_output):
     # run find start codon (Daniel) -- output is (ideally, list of) start codon indexes
     # run translate codon to AA (Noah) -- output is (ideally, list of) translated codons
 
-    # append input to dataframe, assuming codon_to_amino and codons are lists
-    for i in 0..len(codon_to_amino):
-        fasta_output=fasta_output.append({"start_codon_index": [codons[i]], "translated_peptide": [codon_to_amino[i]]},ignore_index=True)
+    # append input to dataframe, assuming proteins and codons are lists
+    for i in 0..len(proteins):
+        fasta_output=fasta_output.append({"start_codon_index": [codons[i]], "translated_peptide": [proteins[i]]},ignore_index=True)
     
     return(fasta_output) 
