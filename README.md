@@ -5,7 +5,7 @@ EIPP project: A program to convert codons to proteins and create a Python packag
 
 ## Goals of the project
 
-- [ ] Create a simple Python Package (2-3 scripts/modules with a few functions and a couple of imports are enough)
+- [X] Create a simple Python Package (2-3 scripts/modules with a few functions and a couple of imports are enough)
 - [ ] Create a testing framework for your package (pytest)
 - [ ] Create documentation and compile it as html (sphinx)
 - [ ] Publish the package to Test PiPy using poetry
