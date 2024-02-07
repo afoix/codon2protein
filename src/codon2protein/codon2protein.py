@@ -3,7 +3,7 @@ import pandas as pd
 import os
 import re
 
-def read_fasta(fasta_file='human_notch.fasta'):
+def read_fasta(fasta_file: str='human_notch.fasta'):
     """
     Extract a DNA sequence from a FASTA file as a string
 
@@ -73,7 +73,7 @@ def find_start_codon(fasta_string: str, first=False, oof=True) -> list:
         return scodons
 
 # Translate the codon to protein (Noah)
-def translate(dna_sequence, codon_table):
+def translate(dna_sequence: str, codon_table: dict):
 
     """This function translates DNA sequences into all conceivable proteins.
     Parameters:
@@ -102,7 +102,7 @@ def translate(dna_sequence, codon_table):
     return proteins
 
 # Tie all together (Jacqueline)
-def codon2protein(fasta_input, codon_csv, output):
+def codon2protein(fasta_input: str, codon_csv: str, output: str):
     """
     Generate all proteins out of the DNA sequence contained in a FASTA file
     according to the codon table from a given csv file.
